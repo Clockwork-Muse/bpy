@@ -1,0 +1,31 @@
+{
+	"name": "Blender Wheel",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+			"USERNAME": "vscode"
+		},
+	},
+	"workspaceFolder": "/blender_wheel",
+	"workspaceMount": "source=${localWorkspaceFolder},target=${containerWorkspaceFolder},type=bind,consistency=cached",
+	"runArgs": [
+		"--name=blender_wheel_devcontainer",
+		"--userns=keep-id",
+	],
+	// Set *default* container specific settings.json values on container create.
+	"settings": {},
+	"containerEnv": {
+		"HOME": "/home/vscode",
+	},
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"mhutchie.git-graph",
+		"eamodio.gitlens",
+	],
+	"containerUser": "vscode",
+	"remoteUser": "vscode",
+	"mounts": [
+		"source=blender_wheel_vscode_extensions,target=/home/vscode/.vscode-server,type=volume",
+		"source=blender_wheel_vscode_insiders_extensions,target=/home/vscode/.vscode-server-insiders,type=volume",
+	],
+}
