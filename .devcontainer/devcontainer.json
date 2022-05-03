@@ -22,6 +22,7 @@
 		"ms-python.python",
 		"mhutchie.git-graph",
 		"eamodio.gitlens",
+		"ms-vscode.cmake-tools",
 	],
 	"containerUser": "vscode",
 	"remoteUser": "vscode",
