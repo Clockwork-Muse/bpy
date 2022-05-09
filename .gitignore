@@ -1,9 +1,3 @@
-*
+_skbuild
 
-!.gitignore
-!.devcontainer
-!.github
-!pyproject.toml
-!README.md
-!setup.cfg
-!setup.py
+*.egg-info
